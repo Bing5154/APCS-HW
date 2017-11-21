@@ -77,24 +77,6 @@ public class Rational
     }
   }
 
-    //finds the max between two numbers --> helper to gcd
-    public static int max(int a, int b) {
-	if (a < b) {
-	    return b;
-	} else {
-	    return a;
-	}
-    }
-
-    //finds the min between two numbers --> helper to gcd
-    public static int min(int a, int b) {
-	if (a < b) {
-	    return a;
-	} else {
-	    return b;
-	}
-    }
-
     //pre: int a, int b
     //post: int LCM
     //exp: find LCM of two numbers by multiplying both and divding the product by gcd
@@ -108,16 +90,10 @@ public class Rational
     //old code from hw19: used a while loop to find gcd between two numbers
     //helper function to ADD and SUBTRACT, LCM and REDUCE
     public static int gcdEW(int a, int b) {
-	int large = max(a,b);
-	int small = min(a,b);
-	//keep resetting large and small with the result of min and max method on (large - small) and small, until small is 0
-	while (small != 0) {
-	    int c = max(large - small, small);
-	    int d = min(large-small, small);
-	    large = c;
-	    small = d;
-	}
-	return large;
+	if (a % b == 0) {
+	    return b;
+        }
+        return gcd( b, a%b);
     }
 
     //pre: Rational
@@ -174,17 +150,8 @@ public class Rational
 	    return -1;
 	}
     }
-
-    
-
-
-    
-
-
-    
-
-
-
+	
+	
   //main method for testing
   public static void main(String[] args)
   {
