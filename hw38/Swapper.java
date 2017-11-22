@@ -1,3 +1,20 @@
+//Bing Li
+//APCS1 pd2
+//HW38: Put It Together
+//2017-11-22
+
+/*
+  0. Read instructions and the comments in Keyboard.java
+  1. Declare and populate an 2D array, recycle printArr method from previous hw and print the original
+  2. Use Keyboard.readInt() to store user input as integer variables
+  3. Pass these integer variables and the 2D array as argument of the swap method
+  4. Implement the swap method (reset, no return)
+       -should have a variable that stores the old copy of string being swapped
+       -swap 
+       -replace the second string being swapped with the old copy
+  5. Call the swap method and use printArr to show result
+ */
+
 
 import cs1.Keyboard; //case sensitive
 public class Swapper {
@@ -23,9 +40,6 @@ public class Swapper {
 	}
     }
     
-
-
-
     public static void main(String[] args) {
 	//declare and set the original array
 	String[][] array = {{"apple", "broccoli", "carrot"},
@@ -52,7 +66,6 @@ public class Swapper {
 	System.out.println();
 	System.out.println("NEW ARRAYS");
 	printArr(array);
-	
 	
     }
     
