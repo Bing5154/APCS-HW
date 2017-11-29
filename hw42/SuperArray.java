@@ -70,6 +70,10 @@ public class SuperArray
   {
     int temp = _data[index];
     _data[index] = newVal;
+    //after setting the values, the meaningful digits increases, shouldn't be returning empty arrays
+    if(_size <= index) {
+	_size = _size + 1;
+    }
     return temp;
   }
 
@@ -94,6 +98,7 @@ public class SuperArray
   //inserts an item at index
   public void add( int index, int newVal )
   {
+
       int[] temp = new int[_size + 1];
       //create a subarray of index 0 to index - 1
       for(int i = 0; i < index; i++) {
