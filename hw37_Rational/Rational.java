@@ -93,7 +93,7 @@ public class Rational
 	if (a % b == 0) {
 	    return b;
         }
-        return gcd( b, a%b);
+        return gcdEW( b, a%b);
     }
 
     //pre: Rational
